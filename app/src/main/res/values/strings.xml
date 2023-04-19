@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LegacyProject</string>
+    <string name="contacts">Contatos</string>
+    <string name="error">Falha ao carregar dados</string>
+</resources>
