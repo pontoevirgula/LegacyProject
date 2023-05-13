@@ -7,6 +7,7 @@ import com.bumptech.glide.load.DecodeFormat
 import com.bumptech.glide.request.RequestListener
 import com.chslcompany.legacyproject.R
 import de.hdodenhof.circleimageview.CircleImageView
+import kotlinx.coroutines.CoroutineDispatcher
 
 
 fun ImageView.buildImage(
@@ -33,4 +34,12 @@ fun CircleImageView.loadImage(
         .error(R.drawable.ic_round_account_circle)
         .centerCrop()
         .into(this)
+
+
+interface DispatcherProvider {
+    val main : CoroutineDispatcher
+    val io : CoroutineDispatcher
+    val default : CoroutineDispatcher
+    val unconfined : CoroutineDispatcher
+}
 
