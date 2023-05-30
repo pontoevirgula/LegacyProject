@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     private fun initRecyclerView() {
         binding.rvContacts.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
+            setHasFixedSize(true)
             adapter = contactAdapter
         }
     }
@@ -62,7 +63,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
     }
 
 }
